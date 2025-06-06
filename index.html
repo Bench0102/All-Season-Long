@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Season Long Landscaping | Pooler, GA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font for business name */
+        @font-face {
+            font-family: 'Koblenz Serial Heavy';
+            src: url('https://fonts.cdnfonts.com/css/koblenz-serial');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .business-name {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 900;
+            color: #000000;
+        }
+        
+        /* Custom button styles */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hero section overlay */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Navbar animation */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Testimonial slider */
+        .testimonial-slider {
+            scroll-behavior: smooth;
+        }
+        
+        /* Gallery hover effect */
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Service card hover */
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        /* Effect 5: same word slide in */
+        .cl-effect-5 a {
+            overflow: hidden;
+            padding: 0 4px;
+            height: auto;
+            line-height: 1.2;
+            display: inline-block;
+        }
+        
+        .cl-effect-5 a span {
+            position: relative;
+            display: inline-block;
+            -webkit-transition: -webkit-transform 0.3s;
+            -moz-transition: -moz-transform 0.3s;
+            transition: transform 0.3s;
+        }
+        
+        .cl-effect-5 a span::before {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            content: attr(data-hover);
+            font-weight: 700;
+            color: #16a34a;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        
+        .cl-effect-5 a:hover span,
+        .cl-effect-5 a:focus span {
+            -webkit-transform: translateY(-100%);
+            -moz-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+
+        /* Floating animation for about image */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 py-4 bg-white md:bg-transparent">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="w-12 h-12 md:w-20 md:h-20 mr-2 md:mr-3">
+                    <img src="./Images/logo.png" alt="All Season Long Landscaping Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="business-name text-lg md:text-3xl text-green-600 hover:text-green-700 font-medium">All Season Long Landscaping</span>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-green-600 focus:outline-none p-2">
+                    <svg id="hamburger-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex space-x-8 cl-effect-5 items-center">
+                <a href="#home" class="text-green-600 hover:text-green-700 font-bold"><span data-hover="Home">Home</span></a>
+                <a href="#services" class="text-green-600 hover:text-green-700 font-bold"><span data-hover="Services">Services</span></a>
+                <a href="#gallery" class="text-green-600 hover:text-green-700 font-bold"><span data-hover="Gallery">Gallery</span></a>
+                <a href="#about" class="text-green-600 hover:text-green-700 font-bold"><span data-hover="About">About</span></a>
+                <a href="#testimonials" class="text-green-600 hover:text-green-700 font-bold"><span data-hover="Testimonials">Testimonials</span></a>
+                <a href="#contact" class="text-green-600 hover:text-green-700 font-bold"><span data-hover="Contact">Contact</span></a>
+                <a href="booking.html" class="inline-block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-2 px-4 md:py-3 md:px-8 rounded-full transition-all duration-300 ml-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-100 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 border-[12px] border-green-600 hover:border-green-700">📞 Book Now</a>
+            </div>
+        </div>
+        
+         <!-- Mobile menu -->
+         <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 right-0 shadow-lg border-t border-gray-200">
+            <div class="flex flex-col space-y-1 p-4">
+                <a href="#home" class="mobile-menu-link block text-green-600 hover:text-green-700 hover:bg-green-50 font-bold py-3 px-4 rounded-lg transition-colors duration-200">Home</a>
+                <a href="#services" class="mobile-menu-link block text-green-600 hover:text-green-700 hover:bg-green-50 font-bold py-3 px-4 rounded-lg transition-colors duration-200">Services</a>
+                <a href="#gallery" class="mobile-menu-link block text-green-600 hover:text-green-700 hover:bg-green-50 font-bold py-3 px-4 rounded-lg transition-colors duration-200">Gallery</a>
+                <a href="#about" class="mobile-menu-link block text-green-600 hover:text-green-700 hover:bg-green-50 font-bold py-3 px-4 rounded-lg transition-colors duration-200">About</a>
+                <a href="#testimonials" class="mobile-menu-link block text-green-600 hover:text-green-700 hover:bg-green-50 font-bold py-3 px-4 rounded-lg transition-colors duration-200">Testimonials</a>
+                <a href="#contact" class="mobile-menu-link block text-green-600 hover:text-green-700 hover:bg-green-50 font-bold py-3 px-4 rounded-lg transition-colors duration-200">Contact</a>
+                <a href="booking.html" class="block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 text-center mt-4 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 border-2 border-green-600 hover:border-green-700">📞 Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-900 min-h-screen flex items-center pt-16 md:pt-0">
+        <!-- Hero image placeholder (user will replace with their image) -->
+        <div class="absolute inset-0 bg-[url('./Images/bg.png')] bg-cover bg-center"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        
+        <div class="container mx-auto px-4 z-10 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">Your Trusted Landscaping Experts in Pooler, GA</h1>
+                <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">Enhancing outdoor spaces since 2005</p>
+                <a href="#contact" class="btn-primary inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">Request a Free Estimate</a>
+            </div>
+        </div>
+        
+        <!-- Scrolling indicator -->
+        <div class="absolute bottom-4 md:bottom-10 left-0 right-0 text-center">
+            <a href="#services" class="animate-bounce inline-block p-2 rounded-full bg-white bg-opacity-20">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-green-800">Our Professional Services</h2>
+            
+            <!-- Service Navigation Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="showService('landscaping-lawn-care')" class="service-btn active px-6 py-3 bg-green-600 text-white rounded-full font-bold transition duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1" data-service="landscaping-lawn-care">
+                    Landscaping & Lawn Care
+                </button>
+                <button onclick="showService('tree-shrub-services')" class="service-btn px-6 py-3 bg-green-600 text-white rounded-full font-bold transition duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1" data-service="tree-shrub-services">
+                    Tree & Shrub Services
+                </button>
+                <button onclick="showService('cleanup-maintenance')" class="service-btn px-6 py-3 bg-green-600 text-white rounded-full font-bold transition duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1" data-service="cleanup-maintenance">
+                    Cleanup & Maintenance
+                </button>
+                <button onclick="showService('irrigation-more')" class="service-btn px-6 py-3 bg-green-600 text-white rounded-full font-bold transition duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1" data-service="irrigation-more">
+                    Irrigation & More
+                </button>
+            </div>
+            <!-- Service Content Card -->
+            <div class="max-w-6xl mx-auto">
+                <!-- Landscaping & Lawn Care -->
+                <div id="landscaping-lawn-care" class="service-content bg-green-800 text-white rounded-2xl p-8 md:p-12 shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-6">Landscaping & Lawn Care</h3>
+                            <p class="text-lg mb-6 leading-relaxed">
+                                Transform your outdoor space with our comprehensive landscaping and lawn care services. From residential gardens to commercial properties, we create and maintain beautiful, healthy landscapes that enhance your property's value and curb appeal.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Residential & Commercial Landscaping</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Lawn Mowing & Fertilization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Sod Installation & Seeding</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Weed & Pest Control</span>
+                                </li>
+                            </ul>
+                            <a href="booking.html" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-green-800 font-bold py-3 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg">
+                                Book now
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 opacity-20 rounded-full shadow-lg"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-yellow-400 opacity-30 rounded-full shadow-lg"></div>
+                            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landscaping service" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tree & Shrub Services -->
+                <div id="tree-shrub-services" class="service-content bg-green-800 text-white rounded-2xl p-8 md:p-12 shadow-xl hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-6">Tree & Shrub Services</h3>
+                            <p class="text-lg mb-6 leading-relaxed">
+                                Professional tree and shrub care to keep your landscape healthy and beautiful. Our certified arborists provide expert pruning, removal, and maintenance services to enhance the safety and aesthetics of your property.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Pruning & Trimming</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Tree Removal</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Stump Grinding</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-green-800 font-bold py-3 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg">
+                                Get Free Estimate
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 opacity-20 rounded-full shadow-lg"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-yellow-400 opacity-30 rounded-full shadow-lg"></div>
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tree service" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleanup & Maintenance -->
+                <div id="cleanup-maintenance" class="service-content bg-green-800 text-white rounded-2xl p-8 md:p-12 shadow-xl hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-6">Cleanup & Maintenance</h3>
+                            <p class="text-lg mb-6 leading-relaxed">
+                                Keep your property pristine year-round with our comprehensive cleanup and maintenance services. From seasonal cleanups to regular maintenance, we ensure your outdoor spaces always look their best.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Yard Cleanup (Leaves, Debris)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Lot Clearing & Grading</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Pressure Washing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Gutter Cleaning</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-green-800 font-bold py-3 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg">
+                                Get Free Estimate
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 opacity-20 rounded-full shadow-lg"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-yellow-400 opacity-30 rounded-full shadow-lg"></div>
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cleanup service" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Irrigation & More -->
+                <div id="irrigation-more" class="service-content bg-green-800 text-white rounded-2xl p-8 md:p-12 shadow-xl hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-6">Irrigation & More</h3>
+                            <p class="text-lg mb-6 leading-relaxed">
+                                Complete your landscape with our irrigation systems and additional services. We provide efficient watering solutions and various outdoor improvements to enhance your property's functionality and appeal.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Sprinkler System Installation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Irrigation Maintenance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                    <span>Fence Installation</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-green-800 font-bold py-3 px-8 rounded-full transition duration-300 shadow-md hover:shadow-lg">
+                                Get Free Estimate
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 opacity-20 rounded-full shadow-lg"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-yellow-400 opacity-30 rounded-full shadow-lg"></div>
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Irrigation service" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-green-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Work Gallery</h2>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">See samples of our completed projects and transformations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="Images/Sample1.jpg" alt="Landscaping Project 1" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-lg font-semibold">Beautiful Landscape</h3>
+                                <p class="text-sm opacity-90">Professional Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Landscape Design</h3>
+                        <p class="text-gray-600 text-sm">Complete landscape transformation with modern design elements and sustainable plantings.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="Images/Sample2.jpg" alt="Landscaping Project 2" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-lg font-semibold">Garden Paradise</h3>
+                                <p class="text-sm opacity-90">Expert Installation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Garden Installation</h3>
+                        <p class="text-gray-600 text-sm">Custom garden design with seasonal flowers and professional maintenance planning.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="Images/Sample3.jpg" alt="Landscaping Project 3" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-lg font-semibold">Lawn Perfection</h3>
+                                <p class="text-sm opacity-90">Premium Care</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Lawn Care Service</h3>
+                        <p class="text-gray-600 text-sm">Professional lawn maintenance with fertilization and seasonal care programs.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="Images/Sample 4.jpg" alt="Landscaping Project 4" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-lg font-semibold">Tree Services</h3>
+                                <p class="text-sm opacity-90">Expert Pruning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tree & Shrub Care</h3>
+                        <p class="text-gray-600 text-sm">Professional tree trimming, pruning, and shrub maintenance for healthy growth.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="Images/Sample5.jpg" alt="Landscaping Project 5" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-lg font-semibold">Cleanup Service</h3>
+                                <p class="text-sm opacity-90">Seasonal Maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Yard Cleanup</h3>
+                        <p class="text-gray-600 text-sm">Comprehensive yard cleanup and debris removal for all seasons.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="Images/Sample6.jpg" alt="Landscaping Project 6" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-lg font-semibold">Irrigation System</h3>
+                                <p class="text-sm opacity-90">Smart Watering</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Irrigation Installation</h3>
+                        <p class="text-gray-600 text-sm">Efficient sprinkler systems and smart irrigation solutions for optimal water management.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <!-- Section Title Outside Card -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About All Season Long Landscaping</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Your trusted landscaping partner since 2005</p>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <p class="text-gray-600 mb-6 text-lg">
+                                Established in 2005, All Season Long Landscaping is a locally owned and operated business dedicated to enhancing outdoor spaces with professional, reliable, and customized landscaping solutions. Serving residential and commercial clients in Pooler, GA, we provide year-round care to keep properties beautiful in every season.
+                            </p>
+                            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600 mb-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Meet the Owner</h3>
+                                <p class="text-gray-600">
+                                    "Craig R., a Savannah native and dedicated family man, founded All Season Long Landscaping in 2005 with a passion for creating stunning outdoor environments. What started as a side hustle has grown into a thriving business that supports his family and serves the community with pride."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <!-- About image with green background, floating animation, and trust indicators -->
+                        <div class="bg-green-800 p-6 rounded-2xl shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-float relative">
+                            <div class="rounded-xl overflow-hidden shadow-xl relative">
+                                <img src="Images/About.png" alt="All Season Long Landscaping" class="w-full h-auto object-cover">
+                                
+                                <!-- Trust Indicators Overlay -->
+                                <div class="absolute inset-0 pointer-events-none">
+                                    <!-- Years of Experience Badge -->
+                                    <div class="absolute top-4 left-4 bg-yellow-400 text-green-800 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-calendar-alt mr-2"></i>
+                                            <span>19+ Years</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Licensed & Insured Badge -->
+                                    <div class="absolute top-4 right-4 bg-white text-green-800 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-shield-alt mr-2"></i>
+                                            <span>Licensed</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Local Business Badge -->
+                                    <div class="absolute bottom-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>
+                                            <span>Pooler, GA</span>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quote moved below the image -->
+                        <div class="mt-8">
+                            <blockquote class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600 italic text-gray-700 text-center">
+                                "We don't just landscape—we build relationships and bring your outdoor vision to life!"
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-green-800 relative">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-12 w-28 h-28 bg-green-700 rounded-full opacity-20 floating-bubble delay-1"></div>
+            <div class="absolute bottom-24 right-8 w-22 h-22 bg-green-600 rounded-full opacity-15 floating-bubble delay-2"></div>
+            <div class="absolute top-40 right-20 w-18 h-18 bg-green-500 rounded-full opacity-25 floating-bubble"></div>
+            <div class="absolute bottom-40 left-20 w-14 h-14 bg-green-400 rounded-full opacity-20 floating-bubble delay-3"></div>
+            <div class="absolute top-64 left-1/4 w-10 h-10 bg-green-300 rounded-full opacity-15 floating-bubble delay-1"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+                <p class="mt-4 text-xl text-green-200 max-w-3xl mx-auto">Hear from homeowners and businesses who trust us with their outdoor spaces</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-800">Sarah J.</h4>
+                            <p class="text-gray-500 text-sm">Pooler, GA</p>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"All Season Long transformed our backyard into a beautiful oasis. Their attention to detail and professionalism exceeded our expectations. We receive compliments from all our neighbors!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Michael T." class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-800">Michael T.</h4>
+                            <p class="text-gray-500 text-sm">Business Owner</p>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As a small business owner, I rely on All Season Long to keep our commercial property looking professional year-round. They're reliable, punctual, and do fantastic work."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa R." class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-800">Lisa R.</h4>
+                            <p class="text-gray-500 text-sm">Pooler, GA</p>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"From the initial consultation to the final walkthrough, the team was professional and knowledgeable. They listened to our needs and delivered beyond what we imagined."</p>
+                </div>
+            </div>
+            
+            <!-- Trust indicators -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-4xl font-bold text-green-600 mb-2">18+</div>
+                    <div class="text-gray-800 font-medium">Years Experience</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-4xl font-bold text-green-600 mb-2">100%</div>
+                    <div class="text-gray-800 font-medium">Satisfaction Guarantee</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-4xl font-bold text-green-600 mb-2">500+</div>
+                    <div class="text-gray-800 font-medium">Happy Clients</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-4xl font-bold text-green-600 mb-2">24/7</div>
+                    <div class="text-gray-800 font-medium">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-green-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Request a Free Estimate</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Ready to transform your outdoor space? Contact us today for a free, no-obligation consultation.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Our Location</h4>
+                                <p>1313 Ryans Way, Pooler, GA 31322</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Call Us</h4>
+                                <a href="tel:9126312500" class="hover:underline">(912) 631-2500</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email Us</h4>
+                                <a href="mailto:info@allseasonlong.com" class="hover:underline">info@allseasonlong.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-xl mr-4 mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Business Hours</h4>
+                                <p>Mon–Fri: 7:30 AM – 5:30 PM</p>
+                                <p>Sat: 7:30 AM – 5:00 PM</p>
+                                <p>Sun: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start pt-4">
+                            <div class="text-xl mr-4 mt-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Connect With Us</h4>
+                                <a href="#" class="hover:underline">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map placeholder -->
+                    <div class="mt-10 rounded-xl overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.9452773206863!2d-81.24838812445696!3d32.0691426735729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fb77115ea5fa43%3A0x8f3a09be16823a1b!2sPooler%2C%20GA%2031322!5e0!3m2!1sen!2sus!4v1690825934533!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-white rounded-xl p-8 text-gray-800 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block font-medium mb-2">Full Name *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block font-medium mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block font-medium mb-2">Service Interested In</label>
+                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                                    <option value="">Select a service</option>
+                                    <option value="landscaping">Landscaping & Lawn Care</option>
+                                    <option value="tree">Tree & Shrub Services</option>
+                                    <option value="cleanup">Cleanup & Maintenance</option>
+                                    <option value="irrigation">Irrigation & More</option>
+                                    <option value="other">Other Services</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block font-medium mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300">
+                                Submit Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between mb-12">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 mr-3">
+                            <img src="./Images/logo.png" alt="All Season Long Landscaping Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span class="business-name text-2xl text-white">All Season Long Landscaping</span>
+                    </div>
+                    <p class="max-w-xs mb-4">Your trusted partner for premium landscaping services in Pooler, GA and surrounding areas.</p>
+                    <div>
+                        <a href="https://www.facebook.com/allseasonlong.landscaping/photos" target="_blank" class="text-white hover:text-green-400 text-2xl mr-4">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-green-400 text-2xl mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-green-400 transition duration-300">Home</a></li>
+                            <li><a href="#services" class="hover:text-green-400 transition duration-300">Services</a></li>
+                            <li><a href="#gallery" class="hover:text-green-400 transition duration-300">Gallery</a></li>
+                            <li><a href="#about" class="hover:text-green-400 transition duration-300">About Us</a></li>
+                            <li><a href="#contact" class="hover:text-green-400 transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-green-400 transition duration-300">Lawn Care</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition duration-300">Landscaping</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition duration-300">Tree Services</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition duration-300">Cleanup</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition duration-300">Irrigation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li>1313 Ryans Way</li>
+                            <li>Pooler, GA 31322</li>
+                            <li><a href="tel:9126312500" class="hover:text-green-400 transition duration-300">(912) 631-2500</a></li>
+                            <li><a href="mailto:croundtree2001@yahoo.com" class="hover:text-green-400 transition duration-300">croundtree2001@yahoo.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">© 2023 All Season Long Landscaping. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-green-400 transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-green-400 transition duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+
+        function showService(serviceId) {
+            // Hide all service content
+            const allServices = document.querySelectorAll('.service-content');
+            allServices.forEach(service => {
+                service.classList.add('hidden');
+            });
+            
+            // Remove active class from all buttons
+            const allButtons = document.querySelectorAll('.service-btn');
+            allButtons.forEach(button => {
+                button.classList.remove('active');
+                button.classList.remove('bg-green-700');
+                button.classList.add('bg-green-600');
+            });
+            
+            // Show selected service
+            document.getElementById(serviceId).classList.remove('hidden');
+            
+            // Add active class to clicked button
+            const activeButton = document.querySelector(`[data-service="${serviceId}"]`);
+            activeButton.classList.add('active');
+            activeButton.classList.remove('bg-green-600');
+            activeButton.classList.add('bg-green-700');
+        }
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+        
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+        
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+        
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking on links
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnButton = mobileMenuButton.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Back to top functionality
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Testimonial slider
+        const slider = document.getElementById('testimonial-slider');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        
+        let currentSlide = 0;
+        
+        function updateSlider() {
+            const width = document.querySelector('.testimonial-slider > div').offsetWidth;
+            slider.scrollTo({
+                left: currentSlide * width,
+                behavior: 'smooth'
+            });
+            
+            // Disable/enable buttons at the ends
+            prevButton.disabled = currentSlide === 0;
+            nextButton.disabled = currentSlide === slider.children.length - 1;
+        }
+        
+        prevButton.addEventListener('click', function() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        });
+        
+        nextButton.addEventListener('click', function() {
+            if (currentSlide < slider.children.length - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        });
+        
+        // Initially disable prev button
+        prevButton.disabled = true;
+        
+        // Responsive behavior for slider
+        function handleResize() {
+            // Reset currentSlide on resize to maintain proper behavior
+            currentSlide = 0;
+            updateSlider();
+        }
+        
+        window.addEventListener('resize', handleResize);
+        
+        // Form submission (placeholder)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally submit the form to your server
+            alert('Thank you for your request! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
